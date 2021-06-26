@@ -8,12 +8,13 @@
 <script>
 // import { ref, onMounted } from 'vue'
 
-// import {onMounted} from "vue";
-
-
 export default {
   setup() {
     window.paypal.Buttons({
+      style: {
+        color:'gold',
+        shape:'pill'
+      },
       createOrder: function(data, actions) {
         // Set up the transaction
         return actions.order.create({
@@ -29,15 +30,6 @@ export default {
     console.log(window.paypal)
   }
 }
-
-    // onMounted(() => {
-    //   let recaptchaScript = document.createElement('script')
-    //   recaptchaScript.setAttribute('src', 'https://www.paypal.com/sdk/js?client-id=AYk9nOjy_151hQwR4HDqpytyOzZPOrff1SmXR4qGCC_CcHWH_ElCTOAL6-tVbl-mIM9twh-UPaKCGErU&components=buttons')
-    //   document.head.appendChild(recaptchaScript)
-    //
-    //   console.log(recaptchaScript)
-    // })
-
 
 </script>
 
